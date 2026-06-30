@@ -1,4 +1,4 @@
-# Fonctionnalités HTML5 & CSS3 pour le Web Moderne
+87e41552b934067e42deefb6386c265ea4f2f4b1# Fonctionnalités HTML5 & CSS3 pour le Web Moderne
 
 Ce projet présente les normes modernes du développement web avec les fonctionnalités HTML5 et CSS3.
 

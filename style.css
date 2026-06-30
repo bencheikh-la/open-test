@@ -1,0 +1,338 @@
+/* CSS3 - Variables et Fonctionnalités Modernes */
+:root {
+  --couleur-principale: #3498db;
+  --couleur-secondaire: #2c3e50;
+  --couleur-accent: #e74c3c;
+  --bg-clair: #ecf0f1;
+  --rayon-bordure: 8px;
+  --vitesse-transition: 0.3s;
+}
+
+/* Réinitialisation et Styles de Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--couleur-secondaire);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Navigation Flexbox CSS3 */
+header {
+  background-color: var(--couleur-secondaire);
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--rayon-bordure);
+  transition: all var(--vitesse-transition) ease;
+}
+
+nav a:hover {
+  background-color: var(--couleur-principale);
+  transform: translateY(-2px);
+}
+
+/* Contenu Principal */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Effets Gradient CSS3 et Ombres */
+section {
+  background: white;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: var(--rayon-bordure);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: apparitionVersLe-Haut 0.6s ease;
+}
+
+h2 {
+  color: var(--couleur-principale);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--couleur-accent);
+  padding-bottom: 0.5rem;
+}
+
+/* Section Héros avec Gradients CSS3 */
+.hero {
+  background: linear-gradient(135deg, var(--couleur-principale), var(--couleur-secondaire));
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: glissementVersLe-Bas 0.8s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* Cartes de Fonctionnalités avec CSS3 Grid */
+#fonctionnalites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  grid-auto-rows: auto;
+}
+
+#fonctionnalites > h2 {
+  grid-column: 1 / -1;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 1.5rem;
+  border-radius: var(--rayon-bordure);
+  border-left: 4px solid var(--couleur-principale);
+  transition: all var(--vitesse-transition) ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  color: var(--couleur-principale);
+  margin-bottom: 0.5rem;
+}
+
+/* Démonstration Flexbox */
+.flex-demo {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--couleur-principale), var(--couleur-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: var(--rayon-bordure);
+  transition: all var(--vitesse-transition) ease;
+}
+
+.box:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Démonstration Grid */
+.grid-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid-item {
+  background: var(--couleur-principale);
+  color: white;
+  padding: 2rem;
+  border-radius: var(--rayon-bordure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all var(--vitesse-transition) ease;
+}
+
+.grid-item:hover {
+  background: var(--couleur-accent);
+  transform: skewY(5deg);
+}
+
+/* Animations et Transitions CSS3 */
+.animated-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--couleur-principale);
+  color: white;
+  border: none;
+  border-radius: var(--rayon-bordure);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--vitesse-transition) ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width var(--vitesse-transition) ease, height var(--vitesse-transition) ease;
+}
+
+.animated-btn:hover {
+  background: var(--couleur-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.animated-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Style des Formulaires HTML5 */
+.form-section {
+  background: white;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+fieldset {
+  border: 2px solid var(--couleur-principale);
+  border-radius: var(--rayon-bordure);
+  padding: 1.5rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--couleur-principale);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--couleur-secondaire);
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--bg-clair);
+  border-radius: var(--rayon-bordure);
+  font-size: 1rem;
+  transition: border-color var(--vitesse-transition) ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--couleur-principale);
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--couleur-principale);
+  color: white;
+  border: none;
+  border-radius: var(--rayon-bordure);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--vitesse-transition) ease;
+}
+
+button[type="submit"]:hover {
+  background: var(--couleur-accent);
+  transform: scale(1.02);
+}
+
+/* Pied de Page */
+footer {
+  background-color: var(--couleur-secondaire);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+/* Animations Keyframe CSS3 */
+@keyframes apparitionVersLe-Haut {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glissementVersLe-Bas {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Requêtes Média CSS3 pour Design Réactif */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #fonctionnalites {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin: 1rem auto;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
